@@ -1,4 +1,4 @@
-#Given a set of number and a target number. find all combinations in the set such as the sum is equal to target. the same number can be used for unlimited times
+#iGiven a set of number and a target number. find all combinations in the set such as the sum is equal to target. the same number can be used for unlimited times
 
 def combination_sum(e,t):
 	a = [];
@@ -26,5 +26,5 @@ def c_s (e,t):
 
 
 a = [7,6,3,2];
-print combination_sum(a,6);
+print combination_sum(a,8);
 
