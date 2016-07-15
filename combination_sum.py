@@ -24,7 +24,23 @@ def c_s (e,t):
 		if a != None:
 			return [e[0]] + a;
 
-
-a = [7,6,3,2];
-print combination_sum(a,8);
+def combination_sum_trail2(c,t):
+	c = sorted(c);
+	return_me = [];
+	i = 0
+	while i < len(c):
+		print c ,t
+		if c[i] >= t:
+			if c[i] == t:
+				return i;
+			print "no match"
+			return None;
+		for k in range(len(c[(i+1):])):
+			sub = combination_sum_trail2(c[i+k+1:],t-c[i]);
+			if sub:
+				return_me.append([c[i],sub]);
+		i += 1
+	return return_me;
+a = [2,3,5,7];
+print combination_sum_trail2(a,7);
 
